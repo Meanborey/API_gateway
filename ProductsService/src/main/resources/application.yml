@@ -1,0 +1,31 @@
+# Database Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products_service
+    username: postgres
+    password: borey1102
+    driver-class-name: org.postgresql.Driver
+
+  # Hibernate Configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+# Application-specific Configuration
+server:
+  port: 8081
+
+  application:
+    name: product-service
+
+# Eureka Configuration (if using Eureka for service discovery)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+
+
+
